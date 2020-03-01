@@ -1,13 +1,13 @@
 import React, { Component } from "react"
 
-class HomePage extends Component {
+class EventPage extends Component {
   render() {
     return (
       <div>
-        home page
+        Events page
       </div>
     )
   }
 }
 
-export default HomePage
+export default EventPage
