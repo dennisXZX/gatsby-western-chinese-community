@@ -1,11 +1,12 @@
 import React, { Component } from "react"
+import Layout from "../components/Layout"
 
 class EventPage extends Component {
   render() {
     return (
-      <div>
+      <Layout>
         Events page
-      </div>
+      </Layout>
     )
   }
 }

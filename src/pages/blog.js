@@ -1,11 +1,12 @@
 import React, { Component } from "react"
+import Layout from "../components/Layout"
 
 class BlogPage extends Component {
   render() {
     return (
-      <div>
+      <Layout>
         blog page
-      </div>
+      </Layout>
     )
   }
 }

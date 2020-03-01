@@ -1,11 +1,13 @@
 import React, { Component } from "react"
+import { Link } from 'gatsby'
+import Layout from "../components/Layout"
 
 class HomePage extends Component {
   render() {
     return (
-      <div>
-        home page
-      </div>
+      <Layout>
+        <Link to='/blog/'>Blog</Link>
+      </Layout>
     )
   }
 }
