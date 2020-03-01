@@ -35,10 +35,10 @@ const Navbar = () => {
               : `${styles.navLinks}`
           }
         >
-          {NAV_LINKS.map((item, index) => {
+          {NAV_LINKS.map((link, index) => {
             return (
               <li key={index}>
-                <Link to={item.path}>{item.text}</Link>
+                <Link to={link.path}>{link.text}</Link>
               </li>
             )
           })}
@@ -46,15 +46,15 @@ const Navbar = () => {
 
         {/* Social Icon Section */}
         <div className={styles.navSocialLinks}>
-          {SOCIAL_ICONS.map((item, index) => {
+          {SOCIAL_ICONS.map((icon, index) => {
             return (
               <a
                 key={index}
-                href={item.url}
+                href={icon.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {item.icon}
+                {icon.icon}
               </a>
             )
           })}

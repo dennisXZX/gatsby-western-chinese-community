@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from 'gatsby'
-import Layout from "../components/layout/Layout"
+import Layout from "../components/Layout/Layout"
 
 class HomePage extends Component {
   render() {
