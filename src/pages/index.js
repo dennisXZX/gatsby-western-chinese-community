@@ -4,6 +4,7 @@ import SimpleHero from "../components/simple-hero/SimpleHero"
 import Banner from "../components/banner/Banner"
 import { Link } from "gatsby"
 import About from "../components/home/About"
+import Services from "../components/home/Services"
 
 class HomePage extends Component {
   render() {
@@ -20,6 +21,9 @@ class HomePage extends Component {
 
         {/* About Section */}
         <About />
+
+        {/* Services Section */}
+        <Services />
       </Layout>
     )
   }
