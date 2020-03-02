@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Layout from "../components/Layout/Layout"
 import Banner from "../components/Banner/Banner"
 import { Link } from "gatsby"
-import styles from "./404.module.scss"
+import styles from "./styles/404.module.scss"
 
 class ErrorPage extends Component {
   render() {

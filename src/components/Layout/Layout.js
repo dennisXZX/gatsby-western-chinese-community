@@ -5,11 +5,11 @@ import "./layout.scss"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <main>
       <Navbar />
       {children}
       <Footer />
-    </>
+    </main>
   )
 }
 

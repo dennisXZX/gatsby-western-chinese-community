@@ -22,11 +22,6 @@
 }
 
 /* Global CSS Style Starts Here */
-main {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 body {
     font-family: "Lato", sans-serif;
@@ -53,6 +48,12 @@ p {
 
 a {
     text-decoration: none;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .defaultHero {
