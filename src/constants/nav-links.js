@@ -1,24 +1,24 @@
 const nav_links = [
   {
     path: '/',
-    text: 'Home'
+    text: '首页'
   },
   {
     path: '/events',
-    text: 'Event'
+    text: '近期活动'
   },
   {
     path: '/services',
-    text: 'Service'
+    text: '服务'
   },
-  {
-    path: '/blog',
-    text: 'Blog'
-  },
-  {
-    path: '/contact',
-    text: 'Contact'
-  }
+  // {
+  //   path: '/blog',
+  //   text: '博客'
+  // },
+  // {
+  //   path: '/contact',
+  //   text: '联系我们'
+  // }
 ]
 
 export default nav_links

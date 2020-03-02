@@ -1,0 +1,31 @@
+.banner {
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+    color: var(--mainWhite);
+
+    .title {
+        font-size: 3.3rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        letter-spacing: 6px;
+    }
+
+    .info {
+        width: 85%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        .title {
+            font-size: 4.5rem;
+        }
+
+        .info {
+            width: 70%;
+        }
+    }
+}
