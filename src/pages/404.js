@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import Layout from "../components/Layout/Layout"
-import Banner from "../components/Banner/Banner"
+import Layout from "../components/layout/Layout"
+import Banner from "../components/banner/Banner"
 import { Link } from "gatsby"
 import styles from "./styles/404.module.scss"
 

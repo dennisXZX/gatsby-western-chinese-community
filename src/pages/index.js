@@ -1,13 +1,15 @@
 import React, { Component } from "react"
-import Layout from "../components/Layout/Layout"
-import SimpleHero from "../components/SimpleHero/SimpleHero"
-import Banner from "../components/Banner/Banner"
+import Layout from "../components/layout/Layout"
+import SimpleHero from "../components/simple-hero/SimpleHero"
+import Banner from "../components/banner/Banner"
 import { Link } from "gatsby"
+import About from "../components/home/About"
 
 class HomePage extends Component {
   render() {
     return (
       <Layout>
+        {/* Hero Section */}
         <SimpleHero>
           <Banner
             title="西区华人之家"
@@ -15,6 +17,9 @@ class HomePage extends Component {
             <Link to="/events" className="btn-white">浏览近期活动 >></Link>
           </Banner>
         </SimpleHero>
+
+        {/* About Section */}
+        <About />
       </Layout>
     )
   }

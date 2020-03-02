@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Layout from "../components/Layout/Layout"
+import Layout from "../components/layout/Layout"
 
 class ContactPage extends Component {
   render() {
