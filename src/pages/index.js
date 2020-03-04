@@ -1,32 +1,46 @@
-import React, { Component } from "react"
+import React from "react"
 import Layout from "../components/layout/Layout"
-import SimpleHero from "../components/simple-hero/SimpleHero"
 import Banner from "../components/banner/Banner"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import About from "../components/home/About"
 import Services from "../components/home/Services"
+import StyledHero from "../components/styled-hero/StyledHero"
 
-class HomePage extends Component {
-  render() {
-    return (
-      <Layout>
-        {/* Hero Section */}
-        <SimpleHero>
-          <Banner
-            title="西区华人之家"
-            info="种种原因我们选择了澳洲，相信每一位的背后都经历了一个曲折的故事。澳洲——我们的第二家乡，希望大家能够一切顺利，快速融入澳洲的生活，融入澳洲的文化。在您无助、迷茫，需要帮助的时候，请记得“帮我热线”，048个5，找大王。">
-            <Link to="/events" className="btn-white">浏览近期活动 >></Link>
-          </Banner>
-        </SimpleHero>
+/** Page queries */
+export const query = graphql`
+    query {
+        defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+            childImageSharp {
+                fluid(quality: 90, maxWidth: 4160) {
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+    }
+`
 
-        {/* About Section */}
-        <About />
+const HomePage = ({ data }) => {
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <StyledHero
+        img={data.defaultBcg.childImageSharp.fluid}
+        home={true}
+      >
+        <Banner
+          title="西区华人之家"
+          info="种种原因我们选择了澳洲，相信每一位的背后都经历了一个曲折的故事。澳洲——我们的第二家乡，希望大家能够一切顺利，快速融入澳洲的生活，融入澳洲的文化。在您无助、迷茫，需要帮助的时候，请记得“帮我热线”，048个5，找大王。">
+          <Link to="/events" className="btn-white">浏览近期活动 >></Link>
+        </Banner>
+      </StyledHero>
 
-        {/* Services Section */}
-        <Services />
-      </Layout>
-    )
-  }
+      {/* About Section */}
+      <About />
+
+      {/* Services Section */}
+      <Services />
+    </Layout>
+  )
 }
 
 export default HomePage
