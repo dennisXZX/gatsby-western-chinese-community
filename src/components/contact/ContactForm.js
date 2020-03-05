@@ -8,7 +8,8 @@ const ContactForm = () => {
       <Title title="联系" subtitle="我们" />
 
       <div className={styles.center}>
-        <form action="">
+        <form action="https://formspree.io/YOUR_EMAIL_ADDRESS"
+              method="POST">
           {/* Name Field */}
           <label htmlFor="name">name</label>
           <div>

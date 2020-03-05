@@ -1,6 +1,6 @@
 ### Brisbane Western Chinese Community Site
 
-Tech Stack: Gatsby, React, Styled-component, GraphQL
+Tech Stack: Gatsby, React, Styled-component, GraphQL, Formspree, Contentful
 
 Scripts:
 
