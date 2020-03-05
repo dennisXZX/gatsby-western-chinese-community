@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import StyledHero from "../components/styled-hero/StyledHero"
 
 /** Page queries */
-export const query = graphql`
+export const heroImageQuery = graphql`
     query {
         contactBcg: file(relativePath: { eq: "connectBcg.jpeg" }) {
             childImageSharp {
@@ -17,9 +17,12 @@ export const query = graphql`
 `
 
 const ContactPage = ({ data }) => {
+  // Extract the hero image from the GraphQL result
+  const { fluid } = data.contactBcg.childImageSharp
+
   return (
     <Layout>
-      <StyledHero img={data.contactBcg.childImageSharp.fluid} />
+      <StyledHero img={fluid} />
     </Layout>
   )
 }

@@ -7,7 +7,7 @@ import Services from "../components/home/Services"
 import StyledHero from "../components/styled-hero/StyledHero"
 
 /** Page queries */
-export const query = graphql`
+export const heroImageQuery = graphql`
     query {
         defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
             childImageSharp {
@@ -20,11 +20,14 @@ export const query = graphql`
 `
 
 const HomePage = ({ data }) => {
+  // Extract the hero image from the GraphQL result
+  const { fluid } = data.defaultBcg.childImageSharp
+
   return (
     <Layout>
       {/* Hero Section */}
       <StyledHero
-        img={data.defaultBcg.childImageSharp.fluid}
+        img={fluid}
         home={true}
       >
         <Banner

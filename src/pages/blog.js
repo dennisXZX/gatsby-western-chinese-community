@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import StyledHero from "../components/styled-hero/StyledHero"
 
 /** Page queries */
-export const query = graphql`
+export const heroImageQuery = graphql`
     query {
         blogBcg: file(relativePath: { eq: "blogBcg.jpeg" }) {
             childImageSharp {
@@ -17,9 +17,12 @@ export const query = graphql`
 `
 
 const BlogPage = ({ data }) => {
+  // Extract the hero image from the GraphQL result
+  const { fluid } = data.blogBcg.childImageSharp
+
   return (
     <Layout>
-      <StyledHero img={data.blogBcg.childImageSharp.fluid} />
+      <StyledHero img={fluid} />
     </Layout>
   )
 }
