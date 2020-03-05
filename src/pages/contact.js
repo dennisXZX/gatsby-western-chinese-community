@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout/Layout"
 import { graphql } from "gatsby"
 import StyledHero from "../components/styled-hero/StyledHero"
+import ContactForm from "../components/contact/ContactForm"
 
 /** Page queries */
 export const heroImageQuery = graphql`
@@ -23,6 +24,9 @@ const ContactPage = ({ data }) => {
   return (
     <Layout>
       <StyledHero img={fluid} />
+
+      {/* Contact Form */}
+      <ContactForm />
     </Layout>
   )
 }
