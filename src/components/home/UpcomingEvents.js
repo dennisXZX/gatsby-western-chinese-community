@@ -2,7 +2,7 @@ import React from "react"
 import Event from "../events/Event"
 import { useStaticQuery, graphql } from "gatsby"
 import Title from "../UI/title/Title"
-import styles from "./upcoming-events.module.scss"
+import styles from "./events.module.scss"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const getUpcomingEvents = graphql`
@@ -33,11 +33,7 @@ const UpcomingEvents = () => {
     <section className={styles.events}>
       <Title title="近期" subtitle="活动" />
       <div className={styles.center}>
-        {upcomingEvents.map(({ node }) => {
-          console.log('contentful_id', node);
-
-          return <Event key={node.id} event={node} />
-        })}
+        {upcomingEvents.map(({ node }) => <Event key={node.id} event={node} />)}
       </div>
       <AniLink fade to="/events" className="btn-primary">全部活动 >></AniLink>
     </section>

@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className={styles.navHeader}>
           {/* Logo */}
           {/*<img src={logo} alt="Brisbane Western Suburbs Chinese Community logo"/>*/}
-          <div>西区华人之家 Logo</div>
+          <div>布里斯班西区华人之家 Logo</div>
 
           {/* Hamburger Button */}
           <button type="button" className={styles.logoBtn} onClick={toggleNav}>
