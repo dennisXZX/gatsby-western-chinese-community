@@ -6,6 +6,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import About from "../components/home/About"
 import Services from "../components/home/Services"
 import StyledHero from "../components/styled-hero/StyledHero"
+import UpcomingEvents from "../components/home/UpcomingEvents"
 
 /** Page queries */
 export const heroImageQuery = graphql`
@@ -43,6 +44,9 @@ const HomePage = ({ data }) => {
 
       {/* Services Section */}
       <Services />
+
+      {/* Upcoming Events Section */}
+      <UpcomingEvents />
     </Layout>
   )
 }
