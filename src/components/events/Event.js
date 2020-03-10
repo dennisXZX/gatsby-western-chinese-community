@@ -12,7 +12,7 @@ const Event = ({ event }) => {
     <article className={styles.event}>
       <div className={styles.imgContainer}>
         <Image fluid={mainImage} className={styles.img} alt="活动" />
-        <AniLink fade className={styles.link} to={`/event/${slug}`}>details</AniLink>
+        <AniLink fade className={styles.link} to={`/events/${slug}`}>details</AniLink>
       </div>
 
       <div className={styles.footer}>
