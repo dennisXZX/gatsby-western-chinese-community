@@ -18,15 +18,23 @@ module.exports = {
   plugins: [
     // Add SASS support
     "gatsby-plugin-sass",
+
     // Add styled-component support
     "gatsby-plugin-styled-components",
+
     // Add image optimisation
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+
     // Add link transition effect
     "gatsby-plugin-transition-link",
+
     // Add Prisma playground at http://localhost:8000/___playground
     "gatsby-plugin-playground",
+
+    // Add SEO support
+    "gatsby-plugin-react-helmet",
+
     // Load local file using GraphQL
     {
       resolve: "gatsby-source-filesystem",
@@ -35,6 +43,7 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       }
     },
+
     // Add Contentful headless CMS support
     {
       resolve: "gatsby-source-contentful",
