@@ -4,8 +4,8 @@ import Layout from "../components/layout/Layout"
 import StyledHero from "../components/styled-hero/StyledHero"
 import styles from "./template.module.scss"
 import Img from "gatsby-image"
-import { FaMoneyBillWave, FaMap } from "react-icons/fa"
-import Day from "./Day"
+import { FaMap } from "react-icons/fa"
+import Day from "./day/Day"
 import AnriLink from "gatsby-plugin-transition-link/AniLink"
 
 export const pageQuery = graphql`
@@ -17,6 +17,7 @@ export const pageQuery = graphql`
                 description
             }
             schedule {
+                time
                 details
             }
             images {
@@ -31,8 +32,6 @@ export const pageQuery = graphql`
 
 const EventTemplate = ({ data }) => {
   const { name, location, description: { description }, startDate, images, schedule } = data.event
-  console.log('data.event', data.event);
-
   const [mainImage, ...eventImages] = images
 
   return (
@@ -65,8 +64,8 @@ const EventTemplate = ({ data }) => {
 
           <h2>daily schedule</h2>
           <div className={styles.journey}>
-            {schedule.map((item, index) => {
-              return <Day key={index} day={item.day} info={item.info} />
+            {schedule.map(item => {
+              return <Day key={item.id} time={item.time} details={item.details} />
             })}
           </div>
 
