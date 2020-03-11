@@ -17,7 +17,7 @@ const getEvents = graphql`
                             ...GatsbyContentfulFluid_tracedSVG
                         }
                     }
-                    startDate
+                    startDate(formatString: "DD/MM/Y")
                 }
             }
         }

@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/Layout"
 import { graphql } from "gatsby"
 import StyledHero from "../components/styled-hero/StyledHero"
-import Events from "../components/events/Events"
+import EventList from "../components/events/EventList"
 
 /** Page queries */
 export const heroImageQuery = graphql`
@@ -24,7 +24,7 @@ const EventPage = ({ data }) => {
   return (
     <Layout>
       <StyledHero img={fluid} />
-      <Events />
+      <EventList />
     </Layout>
   )
 }
